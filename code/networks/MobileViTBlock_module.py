@@ -92,7 +92,6 @@ class Transformer(nn.Module):
             x = ff(x) + x
         return x
     
-# 参考super-miniseg里面的 transformer = Transformer(dims01, depth=4, heads=10, dim_head=64, mlp_dim=dims[5])
 class MobileViTBlock(nn.Module):
     def __init__(self, dim, depth, channel, kernel_size, patch_size, mlp_dim, dropout=0.):
         super().__init__()
